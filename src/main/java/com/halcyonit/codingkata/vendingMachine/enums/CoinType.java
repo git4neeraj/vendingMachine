@@ -15,16 +15,5 @@ public enum CoinType {
 		coinValue = value;
 	}
 
-	
-	/*private static List<CoinType> allowedCoinTypes = new ArrayList<CoinType>();
 
-	static {
-		allowedCoinTypes.add(NICKEL);
-		allowedCoinTypes.add(DIME);
-		allowedCoinTypes.add(QUARTER);
-	}
-
-	public static List<CoinType> getAllowedCoinTypes() {
-		return allowedCoinTypes;
-	}*/
 }

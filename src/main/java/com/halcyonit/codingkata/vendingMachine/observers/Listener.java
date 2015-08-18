@@ -4,7 +4,7 @@ import com.halcyonit.codingkata.vendingMachine.MachineState;
 import com.halcyonit.codingkata.vendingMachine.VendingMachine;
 
 public interface Listener {
-	
-	public void listen(final MachineState machineState,VendingMachine vendingMachine);
+
+    public void listen(final MachineState machineState, VendingMachine vendingMachine);
 
 }
