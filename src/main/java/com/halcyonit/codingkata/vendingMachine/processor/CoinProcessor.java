@@ -10,18 +10,38 @@ import com.halcyonit.codingkata.vendingMachine.validator.CoinValidator;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ * The Class CoinProcessor is there to process coin related functionalities.
+ */
 public class CoinProcessor {
 
+    /** The coin validator. */
     CoinValidator coinValidator;
 
+    /**
+     * Instantiates a new coin processor.
+     *
+     * @param coinValidator the coin validator
+     */
     public CoinProcessor(CoinValidator coinValidator) {
         this.coinValidator = coinValidator;
     }
 
+    /**
+     * Instantiates a new coin processor.
+     */
     public CoinProcessor() {
         super();
     }
 
+    /**
+     * Evaluate amount.
+     *
+     * @param coin the coin
+     * @param numberOfCoins the number of coins
+     * @return the double
+     * @throws InvalidCoinException the invalid coin exception
+     */
     public double evaluateAmount(Coin coin, int numberOfCoins)
             throws InvalidCoinException {
         if (numberOfCoins < 0) {
@@ -37,6 +57,13 @@ public class CoinProcessor {
                 .doubleValue();
     }
 
+    /**
+     * Gets the returning coins.
+     *
+     * @param returnAmount the return amount
+     * @return the returning coins
+     * @throws UnableToMakeChange the unable to make change
+     */
     public int[] getReturningCoins(double returnAmount) throws UnableToMakeChange {
 
         //Since we are working on double to 2 decimal places converting it to int

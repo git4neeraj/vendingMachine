@@ -1,15 +1,28 @@
 package com.halcyonit.codingkata.vendingMachine.domain;
 
+/**
+ * The Class Product.
+ */
 public class Product {
 	
+	/** The product code. */
 	private Integer productCode;
 	
+	/** The description. */
 	private String description;
 	
+	/** The price. */
 	private Double price = 0.0;
 
 	
 	
+	/**
+	 * Instantiates a new product.
+	 *
+	 * @param productCode the product code
+	 * @param description the description
+	 * @param price the price
+	 */
 	public Product(Integer productCode, String description, Double price) {
 		super();
 		this.productCode = productCode;
@@ -17,19 +30,37 @@ public class Product {
 		this.price = price;
 	}
 
+	/**
+	 * Gets the product code.
+	 *
+	 * @return the product code
+	 */
 	public Integer getProductCode() {
 		return productCode;
 	}	
 
+	/**
+	 * Gets the description.
+	 *
+	 * @return the description
+	 */
 	public String getDescription() {
 		return description;
 	}	
 
+	/**
+	 * Gets the price.
+	 *
+	 * @return the price
+	 */
 	public Double getPrice() {
 		return price;
 	}
 
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -42,6 +73,9 @@ public class Product {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -69,6 +103,9 @@ public class Product {
 		return true;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		return "Product [productCode=" + productCode + ", description="
