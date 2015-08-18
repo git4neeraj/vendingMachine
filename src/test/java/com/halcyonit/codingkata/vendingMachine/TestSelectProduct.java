@@ -87,16 +87,14 @@ public class TestSelectProduct {
     public void testSelectProductOutOfStock() throws InvalidCoinException, NotSufficientBalance, ProductOutOfStockException, UnableToMakeChange {
         final Coin coin = new Coin(CoinType.NICKEL);
         machine.acceptCoin(coin, 3);
-        machine.selectProduct(new Product(444, "NOPE", 0.50));
-        assertNull(machine.getMachineState().getSelectedValidProduct());
+        machine.selectProduct(new Product(444, "NOPE", 0.50));       
     }
 
     @Test(expected = UnableToMakeChange.class)
     public void testSelectProductExactChangeProblem() throws InvalidCoinException, NotSufficientBalance, ProductOutOfStockException, UnableToMakeChange {
         final Coin coin = new Coin(CoinType.NICKEL);
         machine.acceptCoin(coin, 3);
-        machine.selectProduct(products.get(5));
-        assertNull(machine.getMachineState().getSelectedValidProduct());
+        machine.selectProduct(products.get(5));       
     }
 
 }
